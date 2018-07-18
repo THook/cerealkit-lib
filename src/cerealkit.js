@@ -4,7 +4,7 @@
     } else if (typeof exports === 'object') {
         module.exports = factory();
     } else {
-        root.tingle = factory();
+        root.cerealkit = factory();
     }
 }(this, function() {
 
@@ -33,7 +33,7 @@
           document.body.replaceChild(c[i], newNode);
         } else {
           if (!slugsBucket[newNode.getAttribute('data-cereal-slug')]) {
-            var modal = new tingle.modal({
+            var modal = new cerealkit.modal({
               footer: false,
               closeMethods: newNode.getAttribute('data-cereal-close-methods') || ['overlay', 'button', 'escape'],
               closeLabel: "Close",
@@ -192,7 +192,7 @@
 
         // prevent double scroll
         this._scrollPosition = window.pageYOffset;
-        document.body.classList.add('tingle-enabled');
+        document.body.classList.add('cerealkit-enabled');
         document.body.style.top = -this._scrollPosition + 'px';
 
         // sticky footer
@@ -233,7 +233,7 @@
             if (!close) return;
         }
 
-        document.body.classList.remove('tingle-enabled');
+        document.body.classList.remove('cerealkit-enabled');
         window.scrollTo(0, this._scrollPosition);
         document.body.style.top = null;
 
@@ -524,7 +524,7 @@
 
     function whichTransitionEvent() {
         var t;
-        var el = document.createElement('tingle-test-transition');
+        var el = document.createElement('cerealkit-test-transition');
         var transitions = {
             'transition': 'transitionend',
             'OTransition': 'oTransitionEnd',
