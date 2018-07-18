@@ -1,0 +1,47 @@
+{
+  "author": {
+    "name": "hugovillain"
+  },
+  "bugs": {
+    "url": "https://github.com/THook/cerealkit-library/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "A pure JavaScript library to embed cereals (modal or inline)",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.5",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-gh-pages": "^0.5.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "pump": "^3.0.0"
+  },
+  "directories": {
+    "doc": "doc"
+  },
+  "homepage": "https://github.com/THook/cerealkit-lib",
+  "keywords": [
+    "cerealKit",
+    "tryCereals",
+    "modal",
+    "dialog"
+  ],
+  "license": "MIT",
+  "main": "dist/cerealkit.min.js",
+  "name": "cerealkit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/THook/cerealkit-lib.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.1.2"
+}
