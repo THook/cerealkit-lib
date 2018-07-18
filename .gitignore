@@ -28,9 +28,6 @@ dist/robot.txt
 package-lock.json
 dump.*
 
-
-messenger/dist
-messenger/node_modules
-
 .build
-node_modules
+
+src
