@@ -14,8 +14,6 @@
 
     var slugsBucket = {};
 
-    console.log(this.document);
-
     function init(c) {
       // c nodeList obtained by querySelectorAll or MutationObserver
       for (var i = 0; i < c.length; i++) {
@@ -54,7 +52,6 @@
           var setupAndOpenModal = function() {
             window.addEventListener('message', function(a) {
               if (a.data === 'iframe-close') {
-                console.log(slugsBucket[newNode.getAttribute('data-cereal-slug')])
                 slugsBucket[newNode.getAttribute('data-cereal-slug')].close();
               }
             }, false);
@@ -474,9 +471,7 @@
 
     function _handleKeyboardNav(event) {
         // escape key
-        console.log('CLOSE')
         if (this.opts.closeMethods.indexOf('escape') !== -1 && event.which === 27 && this.isOpen()) {
-            console.log('CLOSE 1')
             this.close();
         }
     }
@@ -486,7 +481,6 @@
         // opts.closeMethods is not populated when re-opening modal
         if (this.opts.closeMethods && this.opts.closeMethods.indexOf('overlay') !== -1 && !_findAncestor(event.target, 'cerealkit-modal') &&
         event.clientX < this.modal.clientWidth) {
-            console.log('CLOSE 2')
             this.close();
         }
     }

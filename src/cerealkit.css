@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------- */
-/* == tingle v0.13.2 */
+/* == cerealkit v0.13.2 */
 /* ----------------------------------------------------------- */
 
 .cerealkit-modal * {
@@ -113,7 +113,7 @@
 /* state
 -------------------------------------------------------------- */
 
-.tingle-enabled {
+.cerealkit-enabled {
   position: fixed;
   overflow: hidden;
   left: 0;
@@ -124,7 +124,7 @@
   bottom: 0;
 }
 
-.tingle-enabled .tingle-content-wrapper {
+.cerealkit-enabled .cerealkit-content-wrapper {
   filter: blur(8px);
 }
 
@@ -145,7 +145,7 @@
 /* btn
 -------------------------------------------------------------- */
 
-.tingle-btn {
+.cerealkit-btn {
   display: inline-block;
   margin: 0 .5rem;
   padding: 1rem 2rem;
@@ -162,23 +162,23 @@
   transition: background-color .4s ease;
 }
 
-.tingle-btn--primary {
+.cerealkit-btn--primary {
   background-color: #3498db;
 }
 
-.tingle-btn--danger {
+.cerealkit-btn--danger {
   background-color: #e74c3c;
 }
 
-.tingle-btn--default {
+.cerealkit-btn--default {
   background-color: #34495e;
 }
 
-.tingle-btn--pull-left {
+.cerealkit-btn--pull-left {
   float: left;
 }
 
-.tingle-btn--pull-right {
+.cerealkit-btn--pull-right {
   float: right;
 }
 
@@ -186,9 +186,11 @@
 -------------------------------------------------------------- */
 
 @media (max-width : 540px) {
+
   .cerealkit-modal {
     top: 0px;
     display: block;
+    overflow: visible;
     /* padding-top: 60px; */
   }
   /* .full-screen {
@@ -198,10 +200,13 @@
   .cerealkit-modal-box {
     width: auto;
     border-radius: 0;
+    height: 100%;
   }
 
   .cerealkit-modal-box__content {
+    height: 100%;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 
   .cerealkit-modal--noClose {
@@ -212,7 +217,7 @@
     padding-top: 0;
   }
 
-  .cerealkit-modal-box__footer .tingle-btn {
+  .cerealkit-modal-box__footer .cerealkit-btn {
     display: block;
     float: none;
     margin-bottom: 1rem;
@@ -224,7 +229,7 @@
     right: 0;
     left: 0;
     display: block;
-    width: 100%;
+    width: 98%;
     height: 0px;
     border: none;
     background-color: #2c3e50;
@@ -246,7 +251,7 @@
     display: inline-block;
     margin-right: .5rem;
     vertical-align: middle;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 
@@ -261,7 +266,7 @@
     }
   }
 
-  .tingle-enabled .tingle-content-wrapper {
+  .cerealkit-enabled .cerealkit-content-wrapper {
     filter: none;
   }
 }
