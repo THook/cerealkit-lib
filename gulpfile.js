@@ -1,13 +1,14 @@
 var gulp          = require('gulp');
 var browserSync   = require('browser-sync');
 var autoprefixer  = require('gulp-autoprefixer');
+var uglify        = require('gulp-uglify');
+var minify        = require('gulp-minify');
 var ghPages       = require('gulp-gh-pages');
 var rename        = require('gulp-rename');
 var reload        = browserSync.reload;
 var cleanCSS      = require('gulp-clean-css');
 var gutil = require('gulp-util');
-
-const minify = require('gulp-minify');
+let babel = require('gulp-babel');
 
 /* config
 ---------------------------------------------------- */
@@ -75,7 +76,11 @@ gulp.task('js', function() {
 
 gulp.task('js-min', () => {
   return gulp.src('src/cerealkit.js')
+    .pipe(babel({
+      presets: [['es2015', {'modules': false}]],
+    }))
     .pipe(minify())
+    .pipe(uglify())
     .pipe(rename("cerealkit.min.js"))
     .pipe(gulp.dest('dist'))
 });
